@@ -43,6 +43,7 @@ ul {
 ul li {
   font-size: 1.1rem;
   margin: 1rem 0;
+  cursor: pointer;
 }
 
 button {
@@ -66,4 +67,13 @@ button {
 button:hover {
   background-color: #fb8085;
   color: #fff;
+}
+
+input[name="answer"] {
+  accent-color: #f9c1b1;
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer;
 }

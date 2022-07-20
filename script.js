@@ -77,7 +77,10 @@ submitBtn.addEventListener("click", () => {
     if (currentQuiz < quizData.length) {
       loadQuiz();
     } else {
-      if (score == 1) {
+      if (score == 0) {
+        quiz.innerHTML = `<h2>ตอบงี้ ไม่รักกันนิ !!!</h2>
+      <button onclick="location.reload()">ไปมาทำใหม่เลยนะ!!</button>`;
+      } else if (score == 1) {
         quiz.innerHTML = `<h2>เธอไม่รักเค้าหรออออออออ</h2>
       <button onclick="location.reload()">ทำใหม่เลยนะ!!</button>`;
       } else if (score == 2) {
