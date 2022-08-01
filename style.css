@@ -77,3 +77,9 @@ input[name="answer"] {
 label {
   cursor: pointer;
 }
+
+.signature {
+  color: #fff;
+  position: absolute;
+  bottom: 10%;
+}

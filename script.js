@@ -1,26 +1,26 @@
 const quizData = [
   {
-    question: "เธอชอบเค้าไหม",
-    a: "ไม่ชอบ",
-    b: "เฉยๆ",
-    c: "ชอบ",
-    d: "ชอบมากกกกกกกก",
-    correct: "d",
+    question: " Father of ‘C’ programming language",
+    a: "Dennis Ritchie",
+    b: "Prof Jhon Kemeny",
+    c: "Thomas Kurtz",
+    d: "Bill Gates",
+    correct: "a",
   },
   {
-    question: "เธอคิดว่า เค้าคิดว่าเธอน่ารักมั้ย",
-    a: "ไม่",
-    b: "น่ารักดี",
-    c: "น่ารักโคตรๆๆๆๆๆ",
-    d: "ปกติ",
+    question: "SMPS stands for",
+    a: "Start mode power supply",
+    b: "Single mode power supply",
+    c: "Switched mode power supply",
+    d: "Store mode power supply",
     correct: "c",
   },
   {
-    question: "เธอรักเค้ามั้ยยยยย",
-    a: "ไม่รัก",
-    b: "เฉยๆ",
-    c: "รัก",
-    d: "รักมากกกกก",
+    question: "The lowest form of Computer language is called",
+    a: "BASIC",
+    b: "FORTRAN",
+    c: "COBOL",
+    d: "Machine Language",
     correct: "d",
   },
 ];
@@ -78,20 +78,18 @@ submitBtn.addEventListener("click", () => {
       loadQuiz();
     } else {
       if (score == 0) {
-        quiz.innerHTML = `<h2>ตอบงี้ ไม่รักกันนิ !!!</h2>
-      <button onclick="location.reload()">ไปมาทำใหม่เลยนะ!!</button>`;
+        quiz.innerHTML = `<h2>You can try it again, don't give up (${score}/${quizData.length})</h2>
+      <button onclick="location.reload()">Do it!!</button>`;
       } else if (score == 1) {
-        quiz.innerHTML = `<h2>เธอไม่รักเค้าหรออออออออ</h2>
-      <button onclick="location.reload()">ทำใหม่เลยนะ!!</button>`;
+        quiz.innerHTML = `<h2>Keep Fighting (${score}/${quizData.length})</h2>
+      <button onclick="location.reload()">Do it!!</button>`;
       } else if (score == 2) {
-        quiz.innerHTML = `<h2>เธอรักกันจริงมั้ยน้าาา</h2>
-      <button onclick="location.reload()">ลองทำใหม่ไหม</button>`;
+        quiz.innerHTML = `<h2>Almost there!! (${score}/${quizData.length})</h2>
+      <button onclick="location.reload()">Do it again</button>`;
       } else if (score == 3) {
-        quiz.innerHTML = `<h2>เย้ๆ เธอรักเค้าาาาา ❤️ </h2>
-      <button onclick="location.reload()">อยากทำอีกรอบกดเบย</button>`;
+        quiz.innerHTML = `<h2>Well done, you can do it!! (${score}/${quizData.length})</h2>
+      <button onclick="location.reload()">Wanna do it again?</button>`;
       }
-      //   quiz.innerHTML = `<h2>You answered correctly ${score}/${quizData.length}</h2>
-      //   <button onclick="location.reload()">Reload</button>`;
     }
   }
 });
